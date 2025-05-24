@@ -1,17 +1,17 @@
 //Логічні оператори.Розгалуження
 
 // 0,NaN,null,undefinded,"", '', false - завжди значення falsy
-console.log(Boolean(1)); //true
-console.log(Boolean("Hello"));
-console.log(Boolean(""));
-console.log(Boolean(NaN));
-console.log(Boolean(null));
-console.log(Boolean(undefined));
-console.log(Boolean(0));
+// console.log(Boolean(1)); //true
+// console.log(Boolean("Hello"));
+// console.log(Boolean(""));
+// console.log(Boolean(NaN));
+// console.log(Boolean(null));
+// console.log(Boolean(undefined));
+// console.log(Boolean(0));
 
 
 
-//&& - and  - логічне і (зупиняється на правді (false))
+//&& - and  - логічне і (зупиняється на неправді)
 
 // const a = 1;
 // const b = 2;
@@ -68,13 +68,17 @@ console.log(Boolean(0));
 
 // ?? -  нульовий оператор об'єднання
 
-const a = null;
-const name = "Nastya";
-const check2 = a ?? name;
-console.log(check2);
+// const a = null;
+// const name = "Nastya";
+// const check2 = a ?? name;
+// console.log(check2);
 
-let firstName = "Prokopenko"; 
-let lastName = null;
-let nickName = "kolyasochnik";
-alert(firstName ?? lastName ?? nickName);//тому що стоїть значення які показують false він пропускає, а перше значення правди видає в консолі
+// let firstName = "Prokopenko";
+// let lastName = null;
+// let nickName = "kolyasochnik";
+// alert(firstName ?? lastName ?? nickName);//тому що стоїть значення які показують false він пропускає, а перше значення правди видає в консолі
+
+
+
+
 
