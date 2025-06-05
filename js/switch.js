@@ -117,51 +117,60 @@
 // }
 
 
-//CALCULATOR
+// //CALCULATOR
 
-let result;
-const operator = (prompt("Введіть оператор:(+,-,/,*,<,>"));
-const num1 = Number(prompt("Введіть перше число"));
-const num2 = Number(prompt("Введіть друге число"));
-console.log(typeof num1);
-switch (operator) {
-  case "+":
-    result = num1 + num2;
-    alert(`${result}`);
-    break;
-  case "-":
-    result = num1 - num2;
-    alert(`${result}`);
-    break;
-  case "/":
-    result = num1 / num2;
-    alert(`${result}`);
-    break;
-  case "*":
-    result = num1 * num2;
-    alert(`${result}`);
-    break;
-  case "<":
-    result = num1 < num2;
-    alert(`${result} ? "Перше число менше другого" : "Перше число більше другого"`);
-    break;
-  case ">":
-    result = num1 > num2;
-    alert(`${result} ? "Перше число більше другого" : "Перше число менше другого"`);
-    break;
-  default:
-    alert("Шановний, будьте уважні! Введіть правильний оператор");
-}
-
-
-//Область видимості
-
-const a = 10;
+// let result;
+// const operator = (prompt("Введіть оператор:(+,-,/,*,<,>"));
+// const num1 = Number(prompt("Введіть перше число"));
+// const num2 = Number(prompt("Введіть друге число"));
+// console.log(typeof num1);
+// switch (operator) {
+//   case "+":
+//     result = num1 + num2;
+//     alert(`${result}`);
+//     break;
+//   case "-":
+//     result = num1 - num2;
+//     alert(`${result}`);
+//     break;
+//   case "/":
+//     result = num1 / num2;
+//     alert(`${result}`);
+//     break;
+//   case "*":
+//     result = num1 * num2;
+//     alert(`${result}`);
+//     break;
+//   case "<":
+//     result = num1 < num2;
+//     alert(`${result} ? "Перше число менше другого" : "Перше число більше другого"`);
+//     break;
+//   case ">":
+//     result = num1 > num2;
+//     alert(`${result} ? "Перше число більше другого" : "Перше число менше другого"`);
+//     break;
+//   default:
+//     alert("Шановний, будьте уважні! Введіть правильний оператор");
+// }
 
 
-if (true) {
-    const b = 25;
-    console.log(a);
-}
+// //Область видимості
 
-console.log(b);
+// const a = 10;
+
+
+// if (true) {
+//     const b = 25;
+//     console.log(a);
+//   console.log(b);
+//   if (true) {
+//     const c = 100;
+//     console.log(a);
+//     console.log(b);
+//   }
+  // console.log(c);
+// }
+// console.log(c);
+// console.log(b);
+
+
