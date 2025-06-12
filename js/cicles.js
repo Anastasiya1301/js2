@@ -105,10 +105,15 @@
 // console.log(totalSum);
 
 
-for (let u = 1; u <= 10; u += 2){
-    if (u === 5) {
-        // break;
-        continue//код нижче не йде, а повертає на початок
-    }
-    console.log(u);
-}
+// for (let u = 1; u <= 10; u += 2){
+//     if (u === 5) {
+//         // break;
+//         continue//код нижче не йде, а повертає на початок
+//     }
+//     console.log(u);
+// }
+
+// for (let number = 0; number < 10;){
+//     console.log(`Число ${number}`)
+// }
+//без лічильника буде просто бескінечно
