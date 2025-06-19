@@ -122,3 +122,46 @@
 //         continue;
 //     console.log(word);
 // }
+
+
+
+//МЕТОДИ МАСИВУ
+
+
+//split цей метод не масива, а рядка,завдяки ньому з рядка перетвор. в масив
+// string.split(delimiter(роздільник ,пробіл))
+
+
+// const string = "HTML,CSS,JS,React";
+// console.log(string);
+
+// // const array1 = string.split(",");
+// // const array2 = string.split(" ");
+// // console.log(array1);
+// // console.log(array2);
+
+// const array3 = string.split(",", "2");
+// console.log(array3);
+
+
+// const greetMessage = "Вітаємо вас на курсі JS";
+// const greetMessageArray = greetMessage.split(" ", 3);
+
+// // console.log(greetMessageArray);
+
+
+
+// //join - робить з масива рядок
+// // array.join();
+
+// console.log(greetMessageArray.join(" "));
+
+
+
+//reverse - значення масиву навпаки 
+
+const array4 = [1, 2, 4, 6, "apple", 10];
+const reverseArray4 = array4.reverse();
+console.log(array4);
+console.log(reverseArray4);
+
