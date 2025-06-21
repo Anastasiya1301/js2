@@ -128,7 +128,7 @@
 //МЕТОДИ МАСИВУ
 
 
-//split цей метод не масива, а рядка,завдяки ньому з рядка перетвор. в масив
+//метод split цей метод не масива, а рядка,завдяки ньому з рядка перетвор. в масив
 // string.split(delimiter(роздільник ,пробіл))
 
 
@@ -151,17 +151,138 @@
 
 
 
-// //join - робить з масива рядок
+// метод join - робить з масива рядок
 // // array.join();
 
 // console.log(greetMessageArray.join(" "));
 
 
 
-//reverse - значення масиву навпаки 
+//метод reverse - значення масиву навпаки
 
-const array4 = [1, 2, 4, 6, "apple", 10];
-const reverseArray4 = array4.reverse();
-console.log(array4);
-console.log(reverseArray4);
+// const array4 = [1, 2, 4, 6, "apple", 10];
+// const reverseArray4 = array4.reverse();
+// console.log(array4);
+// console.log(reverseArray4);
 
+
+
+// метод indexOf - індекси
+
+// Array.indexOf(item - елемент масиву,from - з якого почин. шукати) - на якому індексі;
+
+// let array = ["HTML", "CSS", "JavaScript"];
+// console.log(array.indexOf("HTML"));
+// console.log(array.indexOf("JavaScript"));
+// console.log(array.indexOf("React"));
+// console.log(array.indexOf("JavaScript", 4));
+
+
+
+
+// метод includes - чи містить масив
+
+// Array.includes(item,from);(true,false)
+
+
+// console.log(array.includes("Python"));
+// console.log(array.includes("css"));
+// console.log(array.includes("CSS"));
+// console.log(array.includes("CSS", 1));
+
+
+
+// метод push - додає новий елемент в кінець масиву
+
+
+// array.push("React","Python");
+// console.log(array);
+
+
+
+
+// метод pop - видаляє останній елемент масиву
+
+
+// array.pop("Python");
+// console.log(array);
+// array.pop();
+// console.log(array);
+// array.pop();
+// console.log(array);
+
+
+
+// метод unshift - додає елемент на початок масиву
+
+// array.unshift("Java");
+// console.log(array);
+
+
+
+// // метод shift - видаляє елемент з початку масиву
+
+// array.shift();
+// console.log(array);
+
+
+
+// const animals = ["Cat", "Dog", "Hamster", "Lion", "Chicken", "Snake"];
+// const indexes = [];
+
+// for (let i = 0; i < animals.length;i ++){
+//     console.log(animals[i]);
+//     if (animals.includes("Hamster")) {
+//         indexes.push(i);
+//     }
+//     console.log(indexes);
+// }
+
+
+// метод splice - може робити декілька операцій(видалення,добавляє,заміняє)
+
+// const animals = ["Cat", "Dog", "Hamster", "Lion", "Chicken", "Snake"];
+//видалення елементу
+
+// animals.splice(1, 3); //починаючи з першого видалилося 3 елемента
+// console.log(animals);
+
+// const removedAnimals = animals.splice(1, 3); //значення тих елементів, які видалили
+// console.log(removedAnimals);
+
+
+//заміна елементу
+
+// animals.splice(0, 1, "Monkey","Elephant"); // 0 - на нульовий індекс, 1 - скільки значень добавити
+// console.log(animals);
+
+// animals.splice(4, 0, "Bear");
+// console.log(animals);
+
+//видалення з кінця масиву
+
+// animals.splice(-1, 1);
+// console.log(animals);
+
+
+// метод slice - робити копію масива, чи його частини
+// Array.slice([start - з якого почин],[end - до якого закінч.])
+
+//часткове копіювання
+// const animals = ["Cat", "Dog", "Hamster", "Lion", "Chicken", "Snake"];
+// const animals1 = ["Cat", "Dog", "Hamster"];
+// const animals3 = ["Lion", "Chicken", "Snake"];
+// const partOfanimals = animals.slice(0, 3);
+// console.log(partOfanimals);
+
+// const copyOfAnimals = animals.slice(-3, -1);
+// console.log(copyOfAnimals);
+
+// const animals2 = animals.slice(); //повністю скопіювати
+// console.log(animals2);
+// console.log(animals2 === animals); //не правда, тому що це копія та оригінал
+
+
+//метод concat - поєднує масиви
+
+// const newAnimals = animals1.concat(animals1, animals3);
