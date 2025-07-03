@@ -86,7 +86,7 @@
 
 
 
-//Псевдомасив(arguments) 
+//Псевдомасив(arguments) - масив який має менше методів
 
 // const sum = function () {
 //     console.log(arguments);
@@ -174,4 +174,9 @@
 //     return "Welcome to Australia";
 // }
 // console.log(offerTrip(12000));
+
+
+
+
+
 
