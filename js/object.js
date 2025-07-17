@@ -16,101 +16,129 @@
 
 
 
-//2 варіант
-//  назва
-let pillow = {
-    width: 500,
-    height: 300,
-    color: "white",
-    weight: 700,
-    "country of origin": "UK",
+// //2 варіант
+// //  назва
+// let pillow = {
+//     width: 500,
+//     height: 300,
+//     color: "white",
+//     weight: 700,
+//     "country of origin": "UK",
     
-};  //{} - літерал об'єкта
+// };  //{} - літерал об'єкта
 
-console.log(pillow);
-
-
-//ДЛЯ ЧОГО?
-
-//щоб властивості і значення використовувати
-//  в якісь функц.
+// console.log(pillow);
 
 
-//ЯК ОТРИМАТИ ЗНАЧЕННЯ ЯКОЇСЬ ВЛАСТИВОСТІ?
-//(як звертатися до властивостей?)
-//властивості - кіс "Keys"
-//  value - значення властивості
+// //ДЛЯ ЧОГО?
+
+// //щоб властивості і значення використовувати
+// //  в якісь функц.
 
 
-//1 ВАРІАНТ
-
-const pillowColor = pillow.color;
-
-console.log(pillow.weight);
-console.log(pillow.color);
-
-console.log(pillowColor);//змінна
+// //ЯК ОТРИМАТИ ЗНАЧЕННЯ ЯКОЇСЬ ВЛАСТИВОСТІ?
+// //(як звертатися до властивостей?)
+// //властивості - кіс "Keys"
+// //  value - значення властивості
 
 
+// //1 ВАРІАНТ
 
-//2 ВАРІАНТ, ЯКЩО В ЛАПКАХ та не тільки
+// const pillowColor = pillow.color;
 
+// console.log(pillow.weight);
+// console.log(pillow.color);
 
-console.log(pillow["country of origin"]);
-console.log(pillow["width"]);
+// console.log(pillowColor);//змінна
 
 
 
-//ЯК ПЕРЕВИЗНАЧИТИ ВЛАСТИВОСТІ?
+// //2 ВАРІАНТ, ЯКЩО В ЛАПКАХ та не тільки
 
-pillow.color = "red";
-console.log(pillow.color);
 
-pillow["country of origin"] = "China";
-console.log(pillow["country of origin"]);
+// console.log(pillow["country of origin"]);
+// console.log(pillow["width"]);
 
 
 
-//ЯК ДОДАТИ ДО ОБ'ЄКТА НОВУ ВЛАСТИВІСТЬ?
+// //ЯК ПЕРЕВИЗНАЧИТИ ВЛАСТИВОСТІ?
 
-//звертаємось до властивості якої не існує,
-//отримаєте undefind
+// pillow.color = "red";
+// console.log(pillow.color);
 
-pillow.shape = "rectangular";
-console.log(pillow.shape);
-console.log(pillow);
-
-
-//ЯК ВИДАЛИТИ З ОБ'ЄКТА ВЛАСТИВІСТЬ?
-
-delete pillow.height;
-
-console.log(pillow.height);
-console.log(pillow);
+// pillow["country of origin"] = "China";
+// console.log(pillow["country of origin"]);
 
 
-//ЧИ МОЖНА В ОБ'ЄКТ ЗАСУНУТИ ІСНУЮЧІ ЗМІННІ?
 
-const name = "Nastya";
-const lastName = "Dudko";
+// //ЯК ДОДАТИ ДО ОБ'ЄКТА НОВУ ВЛАСТИВІСТЬ?
 
-const woman = {
-    age: 16,
-    height: 173,
-    name,
-    lastName,
-}
-console.log(woman);
+// //звертаємось до властивості якої не існує,
+// //отримаєте undefind
 
-//ОБЧИСЛЮВАННЯ ВЛАСТИВОСТЕЙ
+// pillow.shape = "rectangular";
+// console.log(pillow.shape);
+// console.log(pillow);
 
-const inputName = "email";
-const inputEmail = "a@gmail.com";
-const inputUserName = function () {
-    return "userName";
-}
-const userEmailData = {
-    [inputName]: inputEmail,
-    [inputUserName()]:"Nastya Dudko"
-}
-console.log(userEmailData);
+
+// //ЯК ВИДАЛИТИ З ОБ'ЄКТА ВЛАСТИВІСТЬ?
+
+// delete pillow.height;
+
+// console.log(pillow.height);
+// console.log(pillow);
+
+
+// //ЧИ МОЖНА В ОБ'ЄКТ ЗАСУНУТИ ІСНУЮЧІ ЗМІННІ?
+
+// const name = "Nastya";
+// const lastName = "Dudko";
+
+// const woman = {
+//     age: 16,
+//     height: 173,
+//     name,
+//     lastName,
+// }
+// console.log(woman);
+
+// //ОБЧИСЛЮВАННЯ ВЛАСТИВОСТЕЙ
+
+// const inputName = "email";
+// const inputEmail = "a@gmail.com";
+// const inputUserName = function () {
+//     return "userName";
+// }
+// const userEmailData = {
+//     [inputName]: inputEmail,
+//     [inputUserName()]:"Nastya Dudko"
+// }
+// console.log(userEmailData);
+
+
+//THIS
+
+// const userName = {
+//     name: "Nastya",
+
+//     getUserName() {
+//         console.log(userName.name)
+//     }
+// }
+// userName.getUserName();
+
+
+// const newUserName = Object.assign({}, userName);
+// console.log(newUserName);
+// //перевизнач
+// newUserName.name = "Vlad";
+// console.log(newUserName);
+// newUserName.getUserName();
+
+// const newUserName2 = Object.assign({, newUserName });
+// //перевизнач 2 раз
+// newUserName2.name = "Nazar";
+// //не працює
+// newUserName2.getUserName();
+
+
