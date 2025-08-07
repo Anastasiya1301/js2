@@ -7,7 +7,7 @@
 
 //FOREACH
 
-const numbers = [2, 5, 6, 10, 17, 29, -4, -6, -18];
+// const numbers = [2, 5, 6, 10, 17, 29, -4, -6, -18];
 
 // const negativesNumbers = [];
 
