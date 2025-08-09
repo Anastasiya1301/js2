@@ -57,4 +57,23 @@
 
 
 
+//З МАСИВОМ ОБ'ЄКТІВ
+
+// const hoursWorkedPerWeek = [
+//     {day: "Monday", count: 9},
+//     {day: "Tuesday", count: 9},
+//     {day: "Wednesday", count: 9},
+//     {day: "Thursday", count: 9},
+//     {day: "Friday", count: 9},
+// ];
+
+// const hoursQuantity = hoursWorkedPerWeek.reduce((acc, hoursWorkedPerDay) =>
+//     acc + hoursWorkedPerDay.count //витягуємо значення та 
+//     // додаємо значення до акумулятора
+// , 0); 
+// console.log(hoursQuantity);
+
+
+
+
 
