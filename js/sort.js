@@ -73,12 +73,12 @@
 
 //МАСИВ ОБ'ЄКТІВ
 
-const items = [
-    {brand: "Samsung", price: 1000},
-    {brand: "LG", price: 1250},
-    {brand: "Siemence", price: 2000},
-    {brand: "Bosch", price: 1750}
-];
+// const items = [
+//     {brand: "Samsung", price: 1000},
+//     {brand: "LG", price: 1250},
+//     {brand: "Siemence", price: 2000},
+//     {brand: "Bosch", price: 1750}
+// ];
 
 
 // const sortedByPrice = [...items].sort((a, b) =>
@@ -90,8 +90,10 @@ const items = [
 
 //FUNCTION localCompare
 
-const sortedByPrice = [...items].sort((a, b) =>
-    a.brand.localeCompare(b.brand)
-);
+// const sortedByPrice = [...items].sort((a, b) =>
+//     a.brand.localeCompare(b.brand)
+// );
 
-console.log(sortedByPrice);
+// console.log(sortedByPrice);
+
+
