@@ -1,7 +1,7 @@
 //Chaining(ланцюжок) - дозволяють використов.
 // методи один за одним
 
-const numbers = [9, 4, 6, 8, 2, 1];
+// const numbers = [9, 4, 6, 8, 2, 1];
 
 // //відфільтрував числа більше 2
 // const greaterThenTwo = numbers.filter(number => number > 2);
