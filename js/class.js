@@ -2,22 +2,25 @@
 //на якому робляться копії об'єктів
 //НАЗВИ КЛАСІВ З ВЕЛИКОЇ
 //функція конструктор
-class Car {
-  //Статична властивість пишуться перед функц. конструктор
-  static description = "Класс, який описує, певну марку автомобіля"; //властивість,
-  //яка придназначена тільки для цього
-  // класу(статична,тобто її в копії не видно)
+// class Car {
+//   //Статична властивість пишуться перед функц. конструктор
+//   static description = "Класс, який описує, певну марку автомобіля"; //властивість,
+//   //яка придназначена тільки для цього
+//   // класу(статична,тобто її в копії не видно)
 
-  //Статичні методи пишуться перед функц. конструктор
-  static logInfo(carObj) {
-    console.log(carObj);
-  }
+//   //Статичні методи пишуться перед функц. конструктор
+//   static logInfo(carObj) {
+//     console.log(carObj);
+//   }
 
-  constructor({ brand, model, price } = {}) {
-    this._brand = brand;
-    this._model = model;
-    this._price = price;
-    }
+//this потрібен для новий ексемпляр він приймав 
+// для себе і не копуювало значення с мин.класу
+
+//   constructor({ brand, model, price } = {}) {
+//     this._brand = brand;
+//     this._model = model;
+//     this._price = price;
+//     }
     
     //Набори методів,для роботи з класом
     // getBrand() {
@@ -33,30 +36,30 @@ class Car {
 
     //ГЕТTЕРИ не може назва гетера співпадати з назвою власт.
     //отримати інф.
-    get brand() {
-        return this._brand;
-    }
-    get price() {
-        return this._price;
-    }
-    get model() {
-        return this._model;
-    }
-    //СЕТТЕРИ
-    //міняти,додавати інф.
-    set brand(newBrand) {
-        this._brand = newBrand;
-    }
+//     get brand() {
+//         return this._brand;
+//     }
+//     get price() {
+//         return this._price;
+//     }
+//     get model() {
+//         return this._model;
+//     }
+//     //СЕТТЕРИ
+//     //міняти,додавати інф.
+//     set brand(newBrand) {
+//         this._brand = newBrand;
+//     }
 
-    set model(newModel) {
-        this._model = newModel;
-    }
+//     set model(newModel) {
+//         this._model = newModel;
+//     }
 
-};
+// };
 
-//1
+// //1
 
-const toyotaCar = new Car({ brand: "Toyota", model: "Campry", price: 35000 });
+// const toyotaCar = new Car({ brand: "Toyota", model: "Campry", price: 35000 });
 
 // console.log(toyotaCar);
 
@@ -74,35 +77,35 @@ const toyotaCar = new Car({ brand: "Toyota", model: "Campry", price: 35000 });
 
 //Сеттери
 
-toyotaCar.brand = "Audi"
+// toyotaCar.brand = "Audi"
 
-console.log(toyotaCar.brand);
+// console.log(toyotaCar.brand);
 
-toyotaCar.model = "Q7"
-console.log(toyotaCar.model);
-
-
-// const mersedesCar = new Car({ brand: "Mersedes", model: "ML", price: 40000 });
-// console.log(mersedesCar);
+// toyotaCar.model = "Q7"
+// console.log(toyotaCar.model);
 
 
-//НАСЛІДУВАННЯ КЛАСІВ - 
-//розширення додатковими властивостями готовго класу
+// // const mersedesCar = new Car({ brand: "Mersedes", model: "ML", price: 40000 });
+// // console.log(mersedesCar);
 
-class ElectroCar extends Car {
-    constructor({ brand, model, price, powerCapasity } = {}) {
-        super(brand, model, price);
-        // super - передаються з мин. класа
-    // this._brand = brand;
-    // this._model = model;
-    //   this._price = price;
-      this._powerCapasity = powerCapasity;
-    }
+
+// //НАСЛІДУВАННЯ КЛАСІВ - 
+// //розширення додатковими властивостями готовго класу
+
+// class ElectroCar extends Car {
+//     constructor({ brand, model, price, powerCapasity } = {}) {
+//         super(brand, model, price);
+//         // super - передаються з мин. класа
+//     // this._brand = brand;
+//     // this._model = model;
+//     //   this._price = price;
+//       this._powerCapasity = powerCapasity;
+//     }
     
-}
+// }
 
-const vwId6 = new ElectroCar();
-console.log(vwId6);
+// const vwId6 = new ElectroCar();
+// console.log(vwId6);
 
 
 
