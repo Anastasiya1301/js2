@@ -12,30 +12,122 @@
 
 //DOM ДЕРЕВО
 //кожен штмл тег є об'єктом
+//атрибути об'єкта це його властивості
 
 //вузли елементи є  утворення тегами
 //текстові вузли утвор. текстом всередині елем.
 
 
-console.log(document);
-console.log(document.body); //body - об'єкт
+// console.log(document);
+// console.log(document.body); //body - об'єкт
 
-console.dir(document);
+// console.dir(document);
 
-///доступ
+// ///доступ
 
-const firstElement = document.querySelector("p");
-console.log(firstElement);
+// // querySelector - шукає 1 елем
 
-//доступ по id
-const secondElement = document.querySelector("#element");
-console.log(secondElement);
 
-//доступ до класу
-const thirdElement = document.querySelector(".first-element");
-console.log(thirdElement);
+// const firstElement = document.querySelector("p");
+// console.log(firstElement);
 
-//доступ по арибуту
+// //доступ по id
+// const secondElement = document.querySelector("#element");
+// console.log(secondElement);
 
-const lastElement = document.querySelector("[title= Hello]")
+// //доступ до класу
+// // писати крапку на початку, якщо це клас .
+
+// const thirdElement = document.querySelector(".first-element");
+// console.log(thirdElement);
+
+// //доступ по арибуту []
+
+// const lastElement = document.querySelector("[title= Hello]")
+// console.log(lastElement);
+
+
+// queueSelectorAll - шукає всі елем.
+
+// const paragraph = document.querySelectorAll("p");
+// console.log(paragraph);
+// paragraph.forEach(element => console.log(element));
+
+
+// const elemRef = document.querySelector("#element");
+// console.dir(elemRef);
+
+// //add - добавляє класи
+// elemRef.classList.add("red");
+// elemRef.classList.add("green");
+
+
+// //remove - видаляє класи
+
+// elemRef.classList.remove("red");
+
+// //contains - метод який перевіряє наявність містить 
+// // чи той чи інший елемент такий класс - true,false
+
+// const isRed = elemRef.classList.contains("red");
+// console.log(isRed);
+
+// // toggle - перемикач, якщо нема,
+// // то додає, якщо є то видаляє певний клас
+
+// elemRef.classList.toggle("red");
+
+// //style - як в цсс
+// // elemRef.computedStyleMap.border = "2px solid green";
+// // elemRef.computedStyleMap.padding = "10px";
+// // elemRef.style.backgroundColor = "red";
+
+// //все в 1 строчку
+// elemRef.style.cssText = "border:2px solid green; padding: 10px; background-color: red";
+
+
+// // як дізнатися який тег належить тому чи іншому елементу?
+
+// const titleElement = document.querySelector("h1");
+// console.log(titleElement);
+
+// //tagName - дізнатися назву тега 
+
+// const titleElementTag = titleElement.tagName;
+// console.log(titleElementTag);
+
+
+
+// //textContent - показує те що внутри тега контент
+// console.log(titleElement.textContent);
+
+// //можна змінювати значення
+// titleElement.textContent = "goodbye everybody"
+// console.log(titleElement);
+
+
+//navigation
+
+const listRef = document.querySelector("#elem");
+
+//firstElementChild - перший елем
+
+listRef.firstElementChild.style.color = "red";
+console.log(listRef);
+
+//lastElementChild - останній елем
+
+listRef.lastElementChild.style.color = "green";
+
+//children - всі елем
+
+console.log(listRef.children);
+
+const listItems = [...listRef.children];
+console.log(listItems);
+
+//+= - в кінці добавити текст(контент)
+listItems.forEach(item => item.textContent += "!");
+
+
 
