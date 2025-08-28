@@ -66,7 +66,7 @@
 
 // elemRef.classList.remove("red");
 
-// //contains - метод який перевіряє наявність містить 
+// //contains - метод який перевіряє наявність містить
 // // чи той чи інший елемент такий класс - true,false
 
 // const isRed = elemRef.classList.contains("red");
@@ -91,7 +91,7 @@
 // const titleElement = document.querySelector("h1");
 // console.log(titleElement);
 
-// //tagName - дізнатися назву тега 
+// //tagName - дізнатися назву тега
 
 // const titleElementTag = titleElement.tagName;
 // console.log(titleElementTag);
@@ -108,26 +108,63 @@
 
 //navigation
 
-const listRef = document.querySelector("#elem");
+// const listRef = document.querySelector("#elem");
 
-//firstElementChild - перший елем
+// //firstElementChild - перший елем
 
-listRef.firstElementChild.style.color = "red";
-console.log(listRef);
+// listRef.firstElementChild.style.color = "red";
+// console.log(listRef);
 
-//lastElementChild - останній елем
+// //lastElementChild - останній елем
 
-listRef.lastElementChild.style.color = "green";
+// listRef.lastElementChild.style.color = "green";
 
-//children - всі елем
+// //children - всі елем
 
-console.log(listRef.children);
+// console.log(listRef.children);
 
-const listItems = [...listRef.children];
-console.log(listItems);
+// const listItems = [...listRef.children];
+// console.log(listItems);
 
-//+= - в кінці добавити текст(контент)
-listItems.forEach(item => item.textContent += "!");
+// //+= - в кінці добавити текст(контент)
+// listItems.forEach(item => item.textContent += "!");
+
+
+//СТВОРЕННЯ ЕЛЕМЕНТІВ
+
+//createElement
+
+const titleElem = document.createElement("h1");
+titleElem.textContent = "abracadabra"
+titleElem.classList.add("title")
+console.log(titleElem);
+document.body.appendChild(titleElem);
+
+const imageElem = document.createElement("img")
+imageElem.src =
+    "https://images.pexels.com/photos/32878855/pexels-photo-32878855.jpeg";
+imageElem.alt = "Mountain";
+imageElem.width = 300;
+console.log(imageElem);
+// document.body.appendChild(imageElem);
+
+const heroElem = document.querySelector(".hero");
+heroElem.appendChild(titleElem);
+heroElem.appendChild(imageElem);
+console.log(heroElem);
+
+const navElem = document.createElement("li");
+
+navElem.classList.add("item");
+console.log(navElem);
+
+const linkElem = document.createElement("a");
+linkElem.classList.add("link");
+linkElem.href = "";
+linkElem.textContent = "Partners";
+navElem.appendChild(linkElem);
+console.log(navElem);
+document.querySelector("")
 
 
 
