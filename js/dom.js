@@ -217,43 +217,43 @@
 
 //
 
-friends: ["Briana Decker", "Sharron Pace"],
-  {
-    isActive: true,
-    balance: 3821,
-    skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
-    gender: "female",
-    age: 16,
-  },
-  {
-    id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    phone: "+1 (814) 593-3825",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    skills: ["nulla", "anim", "proident", "ipsum", "elit"],
-    age: 24,
-  };
+// friends: ["Briana Decker", "Sharron Pace"],
+//   {
+//     isActive: true,
+//     balance: 3821,
+//     skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+//     gender: "female",
+//     age: 16,
+//   },
+//   {
+//     id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     phone: "+1 (814) 593-3825",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+//     age: 24,
+//   };
 
-const listElem = document.querySelector(".user-list");
+// const listElem = document.querySelector(".user-list");
 
-function createUserMrkUp(users) {
-    return users.map(
-        (user) =>
-            `<li>
-  <h2>${user.name}</h2>
-  <p>${user.age}</p>
-  <span>eye color:</span>
-  <span style="background-color: ${user.eyeColor}"></span>
-</li>`
-    ).join('');
-}
+// function createUserMrkUp(users) {
+//     return users.map(
+//         (user) =>
+//         `<li>
+//   <h2>${user.name}</h2>
+//   <p>${user.age}</p>
+//   <span>eye color:</span>
+//   <span style="background-color: ${user.eyeColor}"></span>
+// </li>`
+//     ).join('');
+// }
 
-listElem.innerHTML = createUserMrkUp(users);
+// listElem.innerHTML = createUserMrkUp(users);
 
-listElem.insertAdjacentElement("beforeend", createUserMrkUp)
-//все пропало
-// listElem.innerHTML = ""
+// listElem.insertAdjacentElement("beforeend", createUserMrkUp)
+// //все пропало
+// // listElem.innerHTML = ""
