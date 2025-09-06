@@ -37,9 +37,9 @@
 //event.currentTarget - елем. на якому спрацював обробник
 
 //отрим. доступ
-const targetBtn = document.querySelector(".js-target-btn");
-const addListenerBtn = document.querySelector(".js-add-listener");
-const removeListenerBtn = document.querySelector(".js-remove-listener");
+// const targetBtn = document.querySelector(".js-target-btn");
+// const addListenerBtn = document.querySelector(".js-add-listener");
+// const removeListenerBtn = document.querySelector(".js-remove-listener");
 
 
 //addEventListener
@@ -90,26 +90,79 @@ const removeListenerBtn = document.querySelector(".js-remove-listener");
 // }
 
 
-//натиснувши на кнопку добавити слухача 
+//натиснувши на кнопку добавити слухача
 //подій повісивши цього слухача на
 
-function onTargetBtnClick() {
-  console.log("click");
+// function onTargetBtnClick() {
+//   console.log("click");
+// }
+
+// addListenerBtn.addEventListener("click", (event) => {
+//     // console.log(event);
+//     // console.log(event.target);
+//     // console.log(event.currentTarget);
+
+//     //додали слухача
+//     // targetBtn.addEventListener("click", onTargetBtnClick);
+//     targetBtn.addEventListener("click", onTargetBtnClick);
+// });
+
+// removeListenerBtn.addEventListener("click", () => {
+//     targetBtn.removeEventListener("click", onTargetBtnClick);
+// })
+
+
+
+//ФОРМА
+
+//доступ до форми
+
+// const form = document.querySelector(".js-register-form");
+// console.log(form);
+
+// form.addEventListener("submit", onFormSubmit)
+
+// function onFormSubmit(event) {
+//   event.preventDefault();
+//   // console.log( `target`,event.target);
+
+//   //.elements - можна достукатися до кожного інпута
+//   console.log(`currentTarget`, event.currentTarget.elements.email.value);
+//   const formElements = event.currentTarget.elements;
+//   const email = formElements.email.value;
+//   const password = formElements.password.value;
+//   const subscription = formElements.subscription.value;
+//   console.log(email, password, subscription);
+
+//   // const formData = {
+//   //   email,
+//   //   password,
+//   //   subscription,
+//   // }
+//   const formData = new formData(event.currentTarget)
+//   formData.forEach((value, name) => {
+//     console.log("value", value);
+//     console.log("name", name);
+//   })
+// }
+
+
+const refs = {
+  input: document.querySelector(".js-input"),
+  nameLabel: document.querySelector(".js-button > span"),
+  licenseCheckbox: document.querySelector(".js-license"),
+  btn: document.querySelector(".js-button"),
+};
+
+refs.input.addEventListener("input", onInputChange)
+refs.licenseCheckbox.addEventListener("change", onLicensChange)
+function onInputChange(event) {
+  refs.nameLabel.textContent = event.currentTrget.value;
+}
+function onLicensChange(event) {
+  refs.btn.disabled = !EventTarget.currentTarget.checked;
 }
 
-addListenerBtn.addEventListener("click", (event) => {
-    // console.log(event);
-    // console.log(event.target);
-    // console.log(event.currentTarget);
-
-    //додали слухача
-    // targetBtn.addEventListener("click", onTargetBtnClick);
-    targetBtn.addEventListener("click", onTargetBtnClick);
-});
-
-removeListenerBtn.addEventListener("click", () => {
-    targetBtn.removeEventListener("click", onTargetBtnClick);
-})
 
 
 
