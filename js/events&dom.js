@@ -147,23 +147,51 @@
 // }
 
 
+// const refs = {
+//   input: document.querySelector(".js-input"),
+//   nameLabel: document.querySelector(".js-button > span"),
+//   licenseCheckbox: document.querySelector(".js-license"),
+//   btn: document.querySelector(".js-button"),
+// };
+
+// refs.input.addEventListener("input", onInputChange)
+// refs.licenseCheckbox.addEventListener("change", onLicensChange)
+// function onInputChange(event) {
+//   refs.nameLabel.textContent = event.currentTrget.value;
+// }
+// function onLicensChange(event) {
+//   refs.btn.disabled = !EventTarget.currentTarget.checked;
+// }
+
+
+
+//KEYDOWN, KEYUP
+
+
+//Keydown- коли натискаєш кнопку
+
+//Keyup - коли відпускаєш кнопку
+
+
+//KEYDOWN
+
 const refs = {
-  input: document.querySelector(".js-input"),
-  nameLabel: document.querySelector(".js-button > span"),
-  licenseCheckbox: document.querySelector(".js-license"),
-  btn: document.querySelector(".js-button"),
+  clearBtn: document.querySelector(".js-clear"),
+  output: document.querySelector(".js-output"),
 };
 
-refs.input.addEventListener("input", onInputChange)
-refs.licenseCheckbox.addEventListener("change", onLicensChange)
-function onInputChange(event) {
-  refs.nameLabel.textContent = event.currentTrget.value;
+window.addEventListener("keydown", onKeypress);
+function onKeypress(event) {
+  // console.log(event);
+  // console.log(`event.key:`, event.key);
+  // console.log(`event.code:`, event.code);
+
+  refs.output.textContent = refs.output.textContent += event.key;
+  console.log(refs.output.textContent);
+
 }
-function onLicensChange(event) {
-  refs.btn.disabled = !EventTarget.currentTarget.checked;
+
+refs.clearBtn.addEventListener("click", onClearBtnClick);
+function onClearBtnClick(event) {
+  refs.output.textContent = '';
 }
-
-
-
-
-
