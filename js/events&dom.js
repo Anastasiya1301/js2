@@ -175,23 +175,101 @@
 
 //KEYDOWN
 
+// const refs = {
+//   clearBtn: document.querySelector(".js-clear"),
+//   output: document.querySelector(".js-output"),
+// };
+
+// window.addEventListener("keydown", onKeypress);
+// function onKeypress(event) {
+//   // console.log(event);
+//   // console.log(`event.key:`, event.key);
+//   // console.log(`event.code:`, event.code);
+
+//   refs.output.textContent = refs.output.textContent += event.key;
+//   console.log(refs.output.textContent);
+
+// }
+
+// refs.clearBtn.addEventListener("click", onClearBtnClick);
+// function onClearBtnClick(event) {
+//   refs.output.textContent = '';
+// }
+
+
+//ПОДІЇ МИШІ
+
+
+// const circleElem = document.querySelector(".js-circle");
+
+//MOUSEMOVE
+
+// circleElem.addEventListener("mousemove", onCircleMove);
+// function onCircleMove(event) {
+//   console.log(event);
+  
+// }
+
+//MOUSEOVER, MOUSEOUT
+
+//hover
+
+// circleElem.addEventListener("mouseover", onCircleElemOver)
+// circleElem.addEventListener("mouseout", onCircleElemLeave)
+
+// function onCircleElemOver(event) {
+//   console.log(event.currentTarget);
+//   const circle = event.currentTarget;
+//   circle.classList.add("circle-active");
+// }
+
+// function onCircleElemLeave(event) {
+//   console.log(event.currentTarget);
+//   const circle = event.currentTarget;
+//   circle.classList.remove("circle-active");
+// }
+
+
+//MODAL
+
 const refs = {
-  clearBtn: document.querySelector(".js-clear"),
-  output: document.querySelector(".js-output"),
+  openModalBtn: document.querySelector('[data-action="open-modal"]'),
+  closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+  backdrop: document.querySelector('.js-backdrop'),
 };
 
-window.addEventListener("keydown", onKeypress);
-function onKeypress(event) {
-  // console.log(event);
-  // console.log(`event.key:`, event.key);
-  // console.log(`event.code:`, event.code);
+refs.openModalBtn.addEventListener("click", onOpenModal)
+refs.closeModalBtn.addEventListener("click", onCloseModal)
+refs.backdrop.addEventListener("click", onBackdropClick)
 
-  refs.output.textContent = refs.output.textContent += event.key;
-  console.log(refs.output.textContent);
+function onOpenModal(event) {
+  window.addEventListener("keydown", onEscKeypress)
+  document.body.classList.add("show-modal");
+}
+function onCloseModal(event) {
+  document.body.classList.remove("show-modal");
+  window.removeEventListener("keydown", onEscKeypress);
+}
+function onBackdropClick(event) {
+  // console.log(`event currentTarget`, event.currentTraget);
+  // console.log(`event target`, event.target);
 
+  if (event.currentTraget === event.target) {
+    onCloseModal()
+  }
+  
 }
 
-refs.clearBtn.addEventListener("click", onClearBtnClick);
-function onClearBtnClick(event) {
-  refs.output.textContent = '';
+function onEscKeypress(event) {
+  console.log(event);
+  if (event.code === 'Escape') {
+    onCloseModal()
+  }
 }
+
+
+
+
+
+
+
