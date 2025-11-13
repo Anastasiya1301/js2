@@ -61,4 +61,77 @@
 
 
 
+// const countries = [
+//   { label: "Ukraine" },
+//   { label: "Sweden" },
+//   { label: "USA" },
+//   { label: "Canada" },
+//   { label: "Mexico" },
+//   { label: "Italy" },
+//   { label: "England" },
+//   { label: "Poland" },
+//   { label: "France" },
+//   { label: "Scotland" },
+//   { label: "Norway" },
+//   { label: "Spain" },
+//   { label: "Germany" },
+// ];
+
+
+// // КРОК 1 - отримуємо доступ до елементів
+// const inputElement = document.querySelector("#input");
+// const listElement = document.querySelector(".js-list");
+
+// inputElement.addEventListener("input", _.debounce(onFilterChange, 500));
+// function onFilterChange(event) {
+//     // console.log(event.target.value);
+//     const filterSearch = event.target.value.toLowerCase()
+//     // console.log(filterSearch);
+
+//     const filteredItems = countries.filter(country => country.label.toLowerCase().includes(filterSearch))
+//     console.log(filteredItems);
+
+//     const listFilteredItemsMarkUp = createListItemsMarkUp(filteredItems);   
+//     listElement.innerHTML = listFilteredItemsMarkUp
+// }
+
+// function createListItemsMarkUp(items) {
+//     return items.map(item => <li>${item.label}</li>).join(" ")
+// }
+// const listItemsMarkUp = createListItemsMarkUp(countries)
+// console.log(listItemsMarkUp);
+
+
+// // listElement.innerHTML = listItemsMarkUp
+
+// const coordsOutputEl = document.querySelector(".js-coords");
+// console.log(coordsOutputEl);
+
+
+// const throttleMouseMove = _.throttle(onCoordsOutputElMouseMove, 1000);
+// let mouseMoveCounter = 0
+// // window.addEventListener("mousemove", onCoordsOutputElMouseMove);
+// window.addEventListener("mousemove", throttleMouseMove);
+
+// function onCoordsOutputElMouseMove(event) {
+//     mouseMoveCounter += 1
+//     coordsOutputEl.textContent = `Кількість викликів функцій: ${mouseMoveCounter}, 
+//     x: ${event.clientX},
+//     y: ${event.clientY}`;    
+// }
+
+// const inputElement = document.querySelector(".js-input");
+// const textElement = document.querySelector(".js-output");
+
+// let inputCounter = 0;
+
+// // inputElement.addEventListener("input", onInputElementChange)
+// inputElement.addEventListener("input", _.debounce(onInputElementChange, 1000));
+
+// function onInputElementChange(event) {
+//     inputCounter += 1
+
+//     textElement.textContent = `Кількість викликів функцій: ${inputCounter},
+//     значення: ${event.target.value}`
+// }
 
