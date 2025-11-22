@@ -33,28 +33,30 @@
 
 
 //ШАБЛОН IntersectionObserver(callback,options)
-const lazyImages = document.querySelectorAll(".feed-img")
-console.dir(lazyImages);
+// const lazyImages = document.querySelectorAll(".feed-img")
+// console.dir(lazyImages);
 
-const callback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) { //result true
-            console.log(entry.target);
-            entry.target.src = entry.target.dataset.src; //створ. атрибут src
-            observer.unobserve(entry.target);//вимкнули спостерігача
-       } 
-    });
-}
-const options = {
-    rootMargin: "0px 0px 75px 0px",
-    threshold: 0,
-}
-callback(lazyImages);
-const observer = new IntersectionObserver(callback, options);
-console.log(observer);
+// const callback = (entries, observer) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) { //result true
+//             console.log(entry.target);
+//             entry.target.src = entry.target.dataset.src; //створ. атрибут src
+//             observer.unobserve(entry.target);//вимкнули спостерігача
+//        }
+//     });
+// }
+// const options = {
+//     rootMargin: "0px 0px 75px 0px",
+//     threshold: 0,
+// }
+// callback(lazyImages);
+// const observer = new IntersectionObserver(callback, options);
+// console.log(observer);
 
-lazyImages.forEach(image => {
-    observer.observe(image) 
-    console.log(image);
+// lazyImages.forEach(image => {
+//     observer.observe(image)
+//     console.log(image);
     
-});
+// });
+
+
